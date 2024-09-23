@@ -1,0 +1,80 @@
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.button-group {
+  margin-top: 10px;
+}
+
+.add-button,
+.remove-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-button {
+  background-color: #dc3545;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+.remove-button:hover {
+  background-color: #c82333;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+  gap: 20px; /* Espaciado entre los productos */
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.add-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
