@@ -7,7 +7,7 @@ import { useState } from "react";
 export const Register = () => {
   // Usamos el hook personalizado useForm para cargar los datos del formulario
   const { form, changed } = useForm({});
-  // Estado para mostrar resultado del registro del usuario
+  // Estado para mostrar resultado del registro del user
   const [saved, setSaved] = useState("not sended");
   // Hook para redirigir
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ export const Register = () => {
     // Obtener la información retornada por la request
     const data = await request.json();
 
-    // Verificar si el estado de la respuesta del backend es "created"
+    // Verificar si el estado de la respuesta del backend es "created" seteamos la variable saved con "saved" y si no, le asignamos "error", esto es para mostrar por pantalla el resultado del registro del usuario
     if (request.status === 201 && data.status === "created") {
       setSaved("saved");
 
@@ -63,16 +63,16 @@ export const Register = () => {
         <h1 className="content__title">Registro</h1>
       </header>
 
-      {/* Formulario de Registro */}
+      {/* Formulario de Registro*/}
       <div className="content__posts">
         <div className="form-style">
-          {/* Respuestas de usuario registrado */}
-          {saved === "saved" && (
+          {/* Respuestas de usuario registrado*/}
+          {saved == "saved" && (
             <strong className="alert alert-success">
               ¡Usuario registrado correctamente!
             </strong>
           )}
-          {saved === "error" && (
+          {saved == "error" && (
             <strong className="alert alert-danger">
               ¡El usuario no se ha registrado!
             </strong>
@@ -113,17 +113,6 @@ export const Register = () => {
                 onChange={changed}
                 value={form.nick || ''}
                 autoComplete="username"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="bio">Biografía</label>
-              <textarea
-                id="bio"
-                name="bio"
-                required
-                onChange={changed}
-                value={form.bio || ''}
-                autoComplete="off"
               />
             </div>
             <div className="form-group">
