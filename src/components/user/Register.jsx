@@ -31,9 +31,10 @@ export const Register = () => {
 
     // Obtener la información retornada por la request
     const data = await request.json();
-
+    console.log(request.status);
+    console.log(data.status);
     // Verificar si el estado de la respuesta del backend es "created"
-    if (request.status === 201 && data.status === "created") {
+    if (request.status === 201 ) {
       setSaved("saved");
 
       // Mostrar modal de éxito

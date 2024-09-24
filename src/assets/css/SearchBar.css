@@ -1,0 +1,31 @@
+/* styles.css o el archivo CSS correspondiente */
+
+.search-bar {
+    display: flex; /* Asegúrate de que el formulario use flexbox */
+    align-items: center; /* Centrar verticalmente el contenido del formulario */
+  }
+  
+  .search-input {
+    width: 600px; /* Cambia este valor para aumentar el ancho de la barra */
+    padding: 8px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Estilo del borde */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-right: 10px; /* Espaciado a la derecha del input */
+  }
+  
+  .search-button {
+    padding: 8px 12px; /* Espaciado interno para el botón */
+    border: none; /* Sin borde */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3; /* Color al pasar el mouse */
+  }
+  
+  nav .search-bar .search-input {
+    width: 800px; /* Aumenta el ancho a 400px */
+  }

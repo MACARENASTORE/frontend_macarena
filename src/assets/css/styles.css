@@ -505,3 +505,83 @@ button{
   font-size: 2rem;
   font-weight: bold;
 }
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button i {
+  font-size: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--color-text-navbar);
+}
+
+.content__button {
+  background-color: var(--color-background-btn-success);
+  border: 1px solid var(--color-border-btn-success);
+}
+
+.content__button:hover {
+  background-color: var(--color-background-btn-success-hover);
+  border-color: var(--color-border-btn-success-hover);
+}
+
+.post__button {
+  background-color: var(--color-background-btn-delete);
+  border: 1px solid var(--color-border-btn-delete);
+}
+
+.post__button:hover {
+  background-color: var(--color-background-btn-delete-hover);
+  border-color: var(--color-border-btn-delete-hover);
+}
+
+.navbar__container-lists {
+  display: flex;
+  justify-content: space-between; /* Para separar los elementos a los extremos */
+  align-items: center; /* Alinear verticalmente los elementos */
+  padding: 10px; /* Espaciado alrededor del navbar */
+}
+
+.container-lists__menu-list {
+  display: flex; /* Usar flexbox para la lista de navegación */
+  list-style: none; /* Eliminar viñetas */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin relleno */
+}
+
+.menu-list__item {
+  margin-right: 20px; /* Espaciado entre los elementos del menú */
+}
+
+.search-cart-wrapper {
+  display: flex;
+  align-items: center; /* Centra el buscador y el carrito verticalmente */
+}
+
+.search-cart-wrapper .cart-container {
+  margin-left: 20px; /* Espaciado entre el buscador y el carrito */
+}

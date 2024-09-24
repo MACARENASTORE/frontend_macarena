@@ -21,7 +21,7 @@ export const Login = () => {
     let userToLogin = form;
 
     // Petición al backend
-    const request = await fetch(Global.url + "user/login", {
+    const request = await fetch(Global.url + "auth/login", {
       method: "POST",
       body: JSON.stringify(userToLogin),
       headers: {
@@ -32,7 +32,7 @@ export const Login = () => {
     // Obtener la información retornada por la request
     const data = await request.json();
 
-    if (data.status == "success") {
+    if (request.status === 200) {
       // Guardar los datos del token y usuario en el localstorage del navegador
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify(data.user));
@@ -48,7 +48,7 @@ export const Login = () => {
 
       // Redirección
       setTimeout(() => {
-        window.location.reload();
+        window.location.href="/products";
       }, 1000);
     } else {
       // Seteamos la variable de estado logged si no se autenticó el usuario
