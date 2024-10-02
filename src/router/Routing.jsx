@@ -4,6 +4,7 @@ import { PrivateLayout } from '../components/layouts/private/PrivateLayout';
 import { Login } from '../components/user/Login';
 import { Register } from '../components/user/Register';
 import Products from '../components/products/Products'; // Asegúrate de que sea la exportación correcta
+import ProductsManager from '../components/products/ProductsManager'; 
 import Cart from '../components/cart/Cart'; // Importa el componente del carrito
 import { Error404 } from '../components/layouts/Error404';
 import { AuthProvider } from '../context/AuthProvider';
@@ -24,12 +25,15 @@ export const Routing = () => {
               <Route index element={<Login />} />
               <Route path="login" element={<Login />} />
               <Route path="registro" element={<Register />} />
+              <Route path="productsmanager" element={<ProductsManager />} />
               <Route path="products" element={<Products />} />
               <Route path="cart" element={<Cart />} /> {/* Cambia a tu componente de carrito */}
             </Route>
 
             {/* Rutas privadas */}
             <Route path="/rsocial" element={<PrivateLayout />}>
+              <Route path="productsmanager" element={<ProductsManager />} />
+              <Route path="products" element={<Products />} />
               <Route path="gente" element={<People />} />
               <Route path="ajustes" element={<Config />} />
               <Route path="logout" element={<Logout />} />
